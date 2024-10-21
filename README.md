@@ -1,4 +1,4 @@
-<img src="https://res.cloudinary.com/dqi42qbcr/image/upload/f_auto,q_auto/r0rz0zvvxcpbm87dxcjh" alt="askcmdimage" width="300"/>
+<img src="https://res.cloudinary.com/dqi42qbcr/image/upload/v1729530928/r0rz0zvvxcpbm87dxcjh.svg" alt="askcmdimage" width="300"/>
 
 
 # AskCmd 🤖
