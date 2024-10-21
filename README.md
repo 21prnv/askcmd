@@ -7,7 +7,7 @@ Did you forget your command-line commands? Don't worry! Now you can directly ask
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/askcmd.svg)](https://www.npmjs.com/package/askcmd)
+[![npm version](https://img.shields.io/npm/v/askcmd.svg)](https://www.npmjs.com/package/askcmd_cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/21prnv/askcmd/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/21prnv/askcmd/pulls)
 
