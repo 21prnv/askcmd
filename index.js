@@ -71,7 +71,7 @@ async function askAI(query) {
     if (
       text
         .toLowerCase()
-        .includes("i can only assist with command-line related questions")
+        .includes("AskCmd can only assist with command-line related questions")
     ) {
       return chalk.red(
         "I'm sorry, but I can only provide information about command-line interfaces and operations. Could you please ask a CLI-related question?"
@@ -96,7 +96,7 @@ async function askAI(query) {
 
 program
   .version("1.0.0")
-  .description(chalk.bold("Command-Focused AI CLI Helper"))
+  .description(chalk.bold("AskCmd AI CLI Helper"))
   .option("-i, --interactive", "Run in interactive mode")
   .argument("[query]", "Query for the AI assistant")
   .action(async (query, options) => {
