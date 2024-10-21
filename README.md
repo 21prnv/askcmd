@@ -7,7 +7,7 @@ Did you forget your command-line commands? Don't worry! Now you can directly ask
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/asktocmd.svg)](https://www.npmjs.com/package/asktocmd_cli)
+[![npm version](https://img.shields.io/npm/v/asktocmd.svg)](https://www.npmjs.com/package/asktocmd)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/21prnv/asktocmd/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/21prnv/asktocmd/pulls)
 
