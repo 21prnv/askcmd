@@ -6,13 +6,55 @@ import readline from "readline";
 import { marked } from "marked";
 import chalk from "chalk";
 import ora from "ora";
-import dotenv from "dotenv";
+import fs from "fs";
+import os from "os";
+import path from "path";
 
-// Initialize Gemini API
-dotenv.config();
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// Define the config file path
+const configPath = path.join(os.homedir(), ".askcmd-config.json");
 
-const SYSTEM_PROMPT = `You are an AI assistant specifically designed to help with command-line interface (CLI) commands and operations...`;
+function saveAPIKey(apiKey) {
+  const config = { GEMINI_API_KEY: apiKey };
+  fs.writeFileSync(configPath, JSON.stringify(config));
+  console.log(chalk.green("API key saved successfully!"));
+  process.exit(0);
+}
+
+function getAPIKey() {
+  if (fs.existsSync(configPath)) {
+    const config = JSON.parse(fs.readFileSync(configPath));
+    return config.GEMINI_API_KEY;
+  } else {
+    return null;
+  }
+}
+
+// Initialize Gemini API with the stored API key
+function initGenAI() {
+  const apiKey = getAPIKey();
+  if (!apiKey) {
+    console.log(
+      chalk.red(
+        "No API key found. Please set it using 'askcmd set-api-key <API-KEY>'.Get your api-key from https://aistudio.google.com/app/apikey"
+      )
+    );
+    process.exit(1);
+  }
+  return new GoogleGenerativeAI(apiKey);
+}
+
+// Move genAI initialization to when it's needed
+let genAI;
+
+const SYSTEM_PROMPT = `You are an AI assistant specifically designed to help with command-line interface (CLI) commands and operations. You should:
+1. Provide clear, accurate explanations of CLI commands and their usage
+2. Suggest appropriate commands based on user needs
+3. Explain command options and flags
+4. Help troubleshoot common CLI issues
+5. Share best practices for command-line operations
+6. Format output to be easily readable in a terminal
+
+Only provide assistance related to command-line interfaces and operations. For non-CLI questions, inform users that you can only help with CLI-related topics.`;
 
 function formatMarkdown(markdown) {
   const tokens = marked.lexer(markdown);
@@ -49,7 +91,6 @@ function formatMarkdown(markdown) {
     }
   }
 
-  // Handle inline formatting
   formattedText = formattedText.replace(/\*\*(.*?)\*\*/g, chalk.bold("$1"));
   formattedText = formattedText.replace(/\*(.*?)\*/g, chalk.italic("$1"));
   formattedText = formattedText.replace(/`(.*?)`/g, chalk.cyan("$1"));
@@ -71,7 +112,7 @@ async function askAI(query) {
     if (
       text
         .toLowerCase()
-        .includes("AskCmd can only assist with command-line related questions")
+        .includes("askcmd can only assist with command-line related questions")
     ) {
       return chalk.red(
         "I'm sorry, but I can only provide information about command-line interfaces and operations. Could you please ask a CLI-related question?"
@@ -83,16 +124,19 @@ async function askAI(query) {
   } catch (error) {
     spinner.stop();
     console.error(chalk.red("Error:"), error);
-    if (error == " TypeError: fetch failed") {
-      return chalk.red(
-        "Sorry, I encountered an error while processing your request.Please check your internet connection"
-      );
-    }
     return chalk.red(
       "Sorry, I encountered an error while processing your request."
     );
   }
 }
+
+// Command to save the API key
+program
+  .command("set-api-key <apiKey>")
+  .description("Save your Gemini API key")
+  .action((apiKey) => {
+    saveAPIKey(apiKey);
+  });
 
 program
   .version("1.0.0")
@@ -120,6 +164,10 @@ program
             rl.close();
             return;
           }
+          // Initialize genAI only when needed
+          if (!genAI) {
+            genAI = initGenAI();
+          }
           const response = await askAI(input);
           console.log("\n" + chalk.cyan("AI Assistant:"), response, "\n");
           askQuestion();
@@ -128,6 +176,10 @@ program
 
       askQuestion();
     } else if (query) {
+      // Initialize genAI only when needed
+      if (!genAI) {
+        genAI = initGenAI();
+      }
       const response = await askAI(query);
       console.log(response);
     } else {
