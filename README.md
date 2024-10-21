@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/21766e7e-f02a-413e-97cd-8ec281f7668f" alt="askcmdimage" width="300"/>
+<img src="https://raw.githubusercontent.com/21prnv/askcmd/refs/heads/main/assets/askcmdimage.svg?token=GHSAT0AAAAAACW2UX4PLXFQMA2HHYQLUVCSZYWRJXA" alt="askcmdimage" width="300"/>
 
 
 # AskCmd 🤖
