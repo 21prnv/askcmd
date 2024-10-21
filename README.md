@@ -1,4 +1,4 @@
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/110466571/378522398-59ad93ad-49c4-4794-a129-9100d7e15e2e.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241021%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241021T164405Z&X-Amz-Expires=300&X-Amz-Signature=b513912c9e364844963a87f478c687cd7b01a027d18642e197fae8583d90fd73&X-Amz-SignedHeaders=host" width="120" alt="Ask Cmd">
+![askcmdimage](https://github.com/user-attachments/assets/21766e7e-f02a-413e-97cd-8ec281f7668f)
 
 # AskCmd 🤖
 
