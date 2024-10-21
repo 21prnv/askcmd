@@ -1,15 +1,15 @@
-<img src="https://res.cloudinary.com/dqi42qbcr/image/upload/v1729530928/r0rz0zvvxcpbm87dxcjh.svg" alt="askcmdimage" width="300"/>
+<img src="https://res.cloudinary.com/dqi42qbcr/image/upload/v1729530928/r0rz0zvvxcpbm87dxcjh.svg" alt="asktocmdimage" width="300"/>
 
 
-# AskCmd 🤖
+# asktocmd 🤖
 
-Did you forget your command-line commands? Don't worry! Now you can directly ask AskCmd, your AI-powered CLI helper. Ask about any command, operation, or CLI-related query, and get instant, intelligent responses powered by Google's Gemini AI.
+Did you forget your command-line commands? Don't worry! Now you can directly ask asktocmd, your AI-powered CLI helper. Ask about any command, operation, or CLI-related query, and get instant, intelligent responses powered by Google's Gemini AI.
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/askcmd.svg)](https://www.npmjs.com/package/askcmd_cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/21prnv/askcmd/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/21prnv/askcmd/pulls)
+[![npm version](https://img.shields.io/npm/v/asktocmd.svg)](https://www.npmjs.com/package/asktocmd_cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/21prnv/asktocmd/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/21prnv/asktocmd/pulls)
 
 </div>
 
@@ -17,13 +17,13 @@ Did you forget your command-line commands? Don't worry! Now you can directly ask
 
 ```bash
 # Install globally
-npm install -g askcmd
+npm install -g asktocmd
 
 # Set up your API key (get it from https://aistudio.google.com/app/apikey)
-askcmd set-api-key YOUR_GEMINI_API_KEY
+asktocmd set-api-key YOUR_GEMINI_API_KEY
 
 # Start asking questions!
-askcmd "How do I list all files in a directory?"
+asktocmd "How do I list all files in a directory?"
 ```
 
 ## 🌟 Features
@@ -38,20 +38,20 @@ askcmd "How do I list all files in a directory?"
 
 ## 📦 Installation
 
-To install AskCmd globally:
+To install asktocmd globally:
 
 ```bash
-npm install -g askcmd
+npm install -g asktocmd
 ```
 
 Verify the installation:
 ```bash
-askcmd --version
+asktocmd --version
 ```
 
 ## 🔑 API Key Setup
 
-AskCmd requires a Gemini API key to function. Here's how to get started:
+asktocmd requires a Gemini API key to function. Here's how to get started:
 
 1. Get your API key:
    - Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create your API key
@@ -62,33 +62,33 @@ AskCmd requires a Gemini API key to function. Here's how to get started:
 
    a. Using the CLI command (recommended):
    ```bash
-   askcmd set-api-key YOUR_GEMINI_API_KEY
+   asktocmd set-api-key YOUR_GEMINI_API_KEY
    ```
 
    b. Manual configuration:
-   - The key is stored in `~/.askcmd-config.json`
+   - The key is stored in `~/.asktocmd-config.json`
    - You can edit this file directly if needed
 
 ## 🖥 Usage
 
-AskCmd offers two modes of operation:
+asktocmd offers two modes of operation:
 
 ### 1. Direct Query Mode
 Perfect for quick, one-off questions:
 
 ```bash
 # Basic usage
-askcmd "How do I find the largest files in a directory?"
+asktocmd "How do I find the largest files in a directory?"
 
 # Complex queries
-askcmd "How do I use grep to search for multiple patterns?"
+asktocmd "How do I use grep to search for multiple patterns?"
 ```
 
 ### 2. Interactive Mode
 Great for multiple questions or learning sessions:
 
 ```bash
-askcmd -i
+asktocmd -i
 ```
 
 This starts an interactive session where you can:
@@ -100,26 +100,26 @@ This starts an interactive session where you can:
 
 ```bash
 # File operations
-askcmd "How do I recursively search for files?"
+asktocmd "How do I recursively search for files?"
 
 # Process management
-askcmd "How do I kill a process using a specific port?"
+asktocmd "How do I kill a process using a specific port?"
 
 # System information
-askcmd "How can I check system resource usage?"
+asktocmd "How can I check system resource usage?"
 ```
 
 ## 🛠 Advanced Usage
 
 ```bash
 # Get help
-askcmd --help
+asktocmd --help
 
 # Check version
-askcmd --version
+asktocmd --version
 
 # Update API key
-askcmd set-api-key NEW_API_KEY
+asktocmd set-api-key NEW_API_KEY
 ```
 
 ## 🤝 Contributing
@@ -134,7 +134,7 @@ Contributions are welcome! Here's how you can help:
 
 ## 🐛 Bug Reports
 
-Found a bug? Please report it on our [issues page](https://github.com/21prnv/askcmd/issues) with:
+Found a bug? Please report it on our [issues page](https://github.com/21prnv/asktocmd/issues) with:
 - A clear description of the issue
 - Steps to reproduce
 - Expected vs actual behavior
@@ -151,7 +151,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💖 Support
 
-If you find AskCmd helpful:
+If you find asktocmd helpful:
 - ⭐ Give it a star on GitHub
 - 📢 Share it with your fellow developers
 - 🐦 Follow the creator on Twitter for updates

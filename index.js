@@ -11,7 +11,7 @@ import os from "os";
 import path from "path";
 
 // Define the config file path
-const configPath = path.join(os.homedir(), ".askcmd-config.json");
+const configPath = path.join(os.homedir(), ".asktocmd-config.json");
 
 function saveAPIKey(apiKey) {
   const config = { GEMINI_API_KEY: apiKey };
@@ -35,7 +35,7 @@ function initGenAI() {
   if (!apiKey) {
     console.log(
       chalk.red(
-        "No API key found. Please set it using 'askcmd set-api-key <API-KEY>'.Get your api-key from https://aistudio.google.com/app/apikey"
+        "No API key found. Please set it using 'asktocmd set-api-key <API-KEY>'.Get your api-key from https://aistudio.google.com/app/apikey"
       )
     );
     process.exit(1);
@@ -139,8 +139,8 @@ program
   });
 
 program
-  .version("1.0.0")
-  .description(chalk.bold("AskCmd AI CLI Helper"))
+  .version("1.0.5")
+  .description(chalk.bold("AskToCmd AI CLI Helper"))
   .option("-i, --interactive", "Run in interactive mode")
   .argument("[query]", "Query for the AI assistant")
   .action(async (query, options) => {

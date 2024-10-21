@@ -1,10 +1,10 @@
 {
-  "name": "askcmd_cli",
-  "version": "1.0.3",
+  "name": "asktocmd",
+  "version": "1.0.5",
   "description": "AI-powered CLI assistant for command-line queries using Google's Gemini AI",
   "main": "index.js",
   "bin": {
-    "askcmd": "./index.js"
+    "asktocmd": "./index.js"
   },
   "type": "module",
   "scripts": {
@@ -38,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/21prnv/askcmd"
+    "url": "https://github.com/21prnv/asktocmd"
   },
   "bugs": {
-    "url": "https://github.com/21prnv/askcmd/issues"
+    "url": "https://github.com/21prnv/asktocmd/issues"
   },
-  "homepage": "https://github.com/21prnv/askcmd"
+  "homepage": "https://github.com/21prnv/asktocmd"
 }
