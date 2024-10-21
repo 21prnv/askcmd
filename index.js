@@ -139,7 +139,7 @@ program
   });
 
 program
-  .version("1.0.5")
+  .version("1.0.6")
   .description(chalk.bold("AskToCmd AI CLI Helper"))
   .option("-i, --interactive", "Run in interactive mode")
   .argument("[query]", "Query for the AI assistant")
